@@ -1,12 +1,7 @@
-const awesomeFunction = (req, res) => {
-  res.send("Hello World!");
-};
+const myController = require("../controllers");
+const routes = require("express").Router();
 
-const tooeleTech = (req, res) => {
-  res.send("Tooele Tech is Awesome!");
-};
+routes.get("/", myController.awesomeFunction);
+routes.get("/ttech", myController.tooeleTech);
 
-module.exports = {
-  awesomeFunction,
-  tooeleTech,
-};
+module.exports = routes;
