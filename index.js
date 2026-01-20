@@ -1,11 +1,12 @@
-const express = require("express");
-const app = express();
-const PORT = 3000;
-
-app.get("/", (req, res) => {
+const awesomeFunction = (req, res) => {
   res.send("Hello World!");
-});
+};
 
-app.listen(3000, () => {
-  console.log(`Test server running on port: ${PORT}`);
-});
+const tooeleTech = (req, res) => {
+  res.send("Tooele Tech is Awesome!");
+};
+
+module.exports = {
+  awesomeFunction,
+  tooeleTech,
+};
